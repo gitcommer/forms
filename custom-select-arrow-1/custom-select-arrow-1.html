@@ -1,0 +1,76 @@
+<!-- 
+https://www.youtube.com/watch?v=LekyHMiuNgI 
+
+note: 1. connect to font awesome to access dropdown icon
+	  2. copy the html and the select field and select code comment code in css
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+	<div class="box">
+		<select>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+			<option>Option 5</option>
+		</select>
+	</div>
+</body>
+</html>
+
+<!---------------------------------->
+
+<style type="text/css">
+	body{
+	margin: 0;
+	padding: 0;
+	background: #004882;
+}
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	}
+
+	/*select field*/
+	.box select{
+		background: #0563af;
+		color: #fff;
+		padding: 10px;
+		width: 250px;
+		height: 50px;
+		border: none;
+		font-size: 20px;
+		box-shadow: 0 5px 25px rgba(0,0,0,.5);
+		-webkit-appearance: button; /*this will hide the arrow*/
+		outline: none;
+	}
+
+	/*select arrow*/
+	.box:before{
+		content:'\f358'; /*font awesome arrow*/
+		font-family: "Font Awesome 5 Free";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		color: #fff;
+		font-size: 28px; 
+		background: #007ce0;
+		pointer-events: none; /*para ma click ang arrow*/
+	}
+	.box:hover:before{
+		background: #0472ca;
+	}
+</style>
